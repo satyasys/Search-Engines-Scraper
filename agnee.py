@@ -222,10 +222,10 @@ def starSearch():
 def main():
     try:
         if cmd.all:
-            googSearch()
             bingSearch()
             starSearch()
             yahoSearch()
+            googSearch()
         else:
             for s in engines:
                 if s == "bing":
