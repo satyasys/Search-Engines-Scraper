@@ -116,7 +116,6 @@ dorks = [
     "intitle:\"Dashboard [Jenkins]\" \""+odomain+"\"",
     "site:sharecode.io | site:controlc.com | site:codepad.co |site:ideone.com | site:codebeautify.org | site:jsdelivr.com | site:codeshare.io | site:codepen.io | site:repl.it | site:jsfiddle.net \""+odomain+"\"",
     "site:gitter.im | site:papaly.com | site:productforums.google.com | site:coggle.it | site:replt.it | site:ycombinator.com | site:libraries.io | site:npm.runkit.com | site:npmjs.com | site:scribd.com \""+odomain+"\"",
-    "site:stackoverflow.com \""+cmd.domain+"\"",
     "site:justpaste.it | site:heypasteit.com | site:pastebin.com \""+odomain+"\"",
     "site:"+cmd.domain+" ext:action | ext:struts | ext:do",
 ]
