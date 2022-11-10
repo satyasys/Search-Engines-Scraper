@@ -54,6 +54,8 @@ As a CLI script:
 
 ```  
 $ python search_engines_cli.py -e google,bing -q "my query" -o json,print
+$ python agnee.py -d testphp.vulnweb.com
+
 ```
 
 ## Other versions  
