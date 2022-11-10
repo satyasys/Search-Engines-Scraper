@@ -163,13 +163,16 @@ def bingSearch():
         bsearch.set_headers({'User-Agent': uagents})
         bout = bsearch.search(str(dork), cmd.page)
         for links in bout.links():
-            if cmd.output is not None:
-                stdout.write(str(links) + '\n')
-                saveFile(cmd.output, links)
-            elif cmd.quite:
-                saveFile(cmd.output, links)
-            else:
-                stdout.write(str(links) + '\n')
+            try:
+                if cmd.output is not None:
+                    stdout.write(str(links) + '\n')
+                    saveFile(cmd.output, links)
+                elif cmd.quite:
+                    saveFile(cmd.output, links)
+                else:
+                    stdout.write(str(links) + '\n')
+            except Exception as err:
+                print(err) 
         sleep(2)
 
 def yahoSearch():
@@ -219,9 +222,9 @@ def starSearch():
 def main():
     try:
         if cmd.all:
+            googSearch()
             bingSearch()
             starSearch()
-            googSearch()
             yahoSearch()
         else:
             for s in engines:
