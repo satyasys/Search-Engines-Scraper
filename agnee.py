@@ -210,13 +210,16 @@ def starSearch():
         ssearch.set_headers({'User-Agent': uagents})
         sout = ssearch.search(str(dork), cmd.page)
         for links in sout.links():
-            if cmd.output is not None:
-                stdout.write(str(links) + '\n')
-                saveFile(cmd.output, links)
-            elif cmd.quite:
-                saveFile(cmd.output, links)
-            else:
-                stdout.write(str(links) + '\n')
+            try:
+                if cmd.output is not None:
+                    stdout.write(str(links) + '\n')
+                    saveFile(cmd.output, links)
+                elif cmd.quite:
+                    saveFile(cmd.output, links)
+                else:
+                    stdout.write(str(links) + '\n')
+            except Exception as err:
+                print(err) 
         sleep(2)
 
 def main():
