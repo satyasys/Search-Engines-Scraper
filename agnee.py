@@ -71,7 +71,9 @@ if cmd.quite:
         exit()
 
 #@> DECLARING SEARCH VARIABLES
-odomain = extract(str(cmd.domain)).domain
+#odomain = extract(str(cmd.domain)).domain
+odomain = cmd.domain
+print("odomain is " + odomain)
 bsearch = Bing()
 gsearch = Google()
 ysearch = Yahoo()
@@ -112,11 +114,11 @@ dorks = [
     "inurl:\"/sym404/root/\" \""+cmd.domain+"\"",
     "site:"+cmd.domain+" not for distribution | confidential | “employee only” | proprietary | top secret | classified | trade secret | internal | private | WS_FTP | ws_ftp | log | LOG",
     "site:.s3.amazonaws.com | site:storage.googleapis.com | site:amazonaws.com \""+odomain+"\"",
-    "intitle:traefik inurl:8080/dashboard \""+odomain+"\"",
+    #"intitle:traefik inurl:8080/dashboard \""+odomain+"\"",
     "intitle:\"Dashboard [Jenkins]\" \""+odomain+"\"",
-    "site:sharecode.io | site:controlc.com | site:codepad.co |site:ideone.com | site:codebeautify.org | site:jsdelivr.com | site:codeshare.io | site:codepen.io | site:repl.it | site:jsfiddle.net \""+odomain+"\"",
-    "site:gitter.im | site:papaly.com | site:productforums.google.com | site:coggle.it | site:replt.it | site:ycombinator.com | site:libraries.io | site:npm.runkit.com | site:npmjs.com | site:scribd.com \""+odomain+"\"",
-    "site:justpaste.it | site:heypasteit.com | site:pastebin.com \""+odomain+"\"",
+    #"site:sharecode.io | site:controlc.com | site:codepad.co |site:ideone.com | site:codebeautify.org | site:jsdelivr.com | site:codeshare.io | site:codepen.io | site:repl.it | site:jsfiddle.net \""+odomain+"\"",
+    #"site:gitter.im | site:papaly.com | site:productforums.google.com | site:coggle.it | site:replt.it | site:ycombinator.com | site:libraries.io | site:npm.runkit.com | site:npmjs.com | site:scribd.com \""+odomain+"\"",
+    #"site:justpaste.it | site:heypasteit.com | site:pastebin.com \""+odomain+"\"",
     "site:"+cmd.domain+" ext:action | ext:struts | ext:do",
 ]
 
