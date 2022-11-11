@@ -149,7 +149,7 @@ def googSearch():
                 saveFile(cmd.output, links)
             else:
                 stdout.write(str(links) + '\n')
-        sleep(2)
+        sleep(5)
 def bingSearch():
     """
     Bing search function
